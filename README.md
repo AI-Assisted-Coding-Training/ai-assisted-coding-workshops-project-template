@@ -32,6 +32,10 @@ Both commands must succeed, and Copilot Chat must reply to `Hello`.
 
 3. Open the folder in VS Code and start Copilot Chat.
 
+## API contract
+
+The [backend API contract](docs/api-contract.md) defines the Planning Poker WebSocket protocol, room and voting behavior, and the `/health` route. Use it as the shared interface when planning and implementing the frontend and backend.
+
 ## How we work
 
 - Slice work into small, testable, vertical slices delivered end to end.
