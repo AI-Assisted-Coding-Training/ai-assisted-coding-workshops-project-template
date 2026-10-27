@@ -20,17 +20,19 @@ gh repo list KainosSoftwareLtd --limit 1
 
 Both commands must succeed, and Copilot Chat must reply to `Hello`.
 
-## Getting started
+## GitHub Project Setup
 
-1. Click **Use this template** → **Create a new repository** and create it under your own GitHub account.
-2. Clone your new repository (not the template):
+This repository is configured to use the GitHub Project at <https://github.com/orgs/KainosSoftwareLtd/projects/101>.
 
-   ```shell
-   git clone https://github.com/<your-username>/<your-repo-name>
-   cd <your-repo-name>
-   ```
+It is also set up to use the **Kainos Backlog Assistant** VS Code extension, which allows to read and create epics and stories in the GitHub project. To use it you need repository write access, the extension installed from a `.vsix` file, and a Personal Access Token (PAT).
 
-3. Open the folder in VS Code and start Copilot Chat.
+1. **Create a PAT**: on GitHub, go to your profile icon → **Settings** → **Developer settings** → **Personal access tokens** → **Tokens (classic)** → **Generate new token (classic)**.
+   - Use any token name.
+   - Tick the **repo** and **project** scopes.
+2. **Authorise SSO**: next to the token, choose **Configure SSO** and authorise it for `KainosSoftwareLtd`.
+3. **Install the extension**: the file [backlog-assistant-0.6.0.vsix](tools/backlog-assistant-0.6.0.vsix) is in the [tools](tools) folder. In VS Code open **Extensions** → **...** menu → **Install from VSIX...** and select it.
+4. **Set the PAT**: open the **Backlog Assistant** tree view panel, click the **key** icon to set the extension's credentials, and paste in the PAT.
+5. **Restart VS Code**: it must be restarted after setting the PAT, or the extension will not pick it up.
 
 ## API contract
 
