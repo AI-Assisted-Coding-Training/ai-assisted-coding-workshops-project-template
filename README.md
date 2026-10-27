@@ -36,6 +36,12 @@ Both commands must succeed, and Copilot Chat must reply to `Hello`.
 
 The [backend API contract](docs/api-contract.md) defines the Planning Poker WebSocket protocol, room and voting behavior, and the `/health` route. Use it as the shared interface when planning and implementing the frontend and backend.
 
+## Test framework
+
+The [Playwright test framework](test/README.md) lives in `test/`. Run its npm
+commands from that directory, not the repository root. The existing scenarios
+target Sauce Demo as examples; they do not yet test Planning Poker.
+
 ## How we work
 
 - Slice work into small, testable, vertical slices delivered end to end.
