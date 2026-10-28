@@ -34,6 +34,10 @@ It is also set up to use the **Kainos Backlog Assistant** VS Code extension, whi
 4. **Set the PAT**: open the **Backlog Assistant** tree view panel, click the **key** icon to set the extension's credentials, and paste in the PAT.
 5. **Restart VS Code**: it must be restarted after setting the PAT, or the extension will not pick it up.
 
+## Pre-commit hook
+
+Run `npm install` in the project folder. It installs knip and turns on the pre-commit hook that runs it.
+
 ## API contract
 
 The [backend API contract](docs/api-contract.md) defines the Planning Poker WebSocket protocol, room and voting behavior, and the `/health` route. Use it as the shared interface when planning and implementing the frontend and backend.

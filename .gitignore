@@ -1,3 +1,6 @@
+# dependencies
+node_modules/
+
 # temporary backlog files
 .backlog/breakdowns/
 .backlog/local/

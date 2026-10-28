@@ -1,0 +1,7 @@
+#!/bin/sh
+# Block the commit when knip finds unused files, exports or dependencies.
+if [ ! -x node_modules/.bin/knip ]; then
+  echo "pre-commit: knip is not installed. Run 'npm install' first." >&2
+  exit 1
+fi
+exec node_modules/.bin/knip

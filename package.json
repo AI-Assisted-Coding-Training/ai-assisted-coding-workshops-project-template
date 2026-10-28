@@ -1,0 +1,10 @@
+{
+  "name": "planning-poker",
+  "private": true,
+  "scripts": {
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "devDependencies": {
+    "knip": "^6.43.0"
+  }
+}
