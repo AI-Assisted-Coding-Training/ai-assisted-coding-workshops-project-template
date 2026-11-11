@@ -14,7 +14,7 @@ A web application for agile estimation. Team members join a shared room, vote pr
 - Latest [VS Code](https://code.visualstudio.com/)
 - GitHub Copilot licence and the GitHub Copilot Chat extension installed in VS Code
 - Any modern web browser
-- *(Optional)* Node.js and npm, needed for the pre-commit hook, the Playwright tests and any Node-based frontend tooling
+- *(Optional)* Node.js and npm, needed only for the Playwright tests and any Node-based frontend tooling
 
 Preflight check:
 
@@ -28,7 +28,7 @@ Both commands must succeed, and Copilot Chat must reply to `Hello`.
 ## Getting started
 
 1. Clone the repository.
-2. *(Optional, requires Node.js)* Run `npm install` in the project folder. It installs [knip](https://knip.dev/) and enables the pre-commit hook that runs it.
+2. Set up the [pre-commit hook](#pre-commit-hook).
 
 ## Project structure
 
@@ -36,6 +36,32 @@ Both commands must succeed, and Copilot Chat must reply to `Hello`.
 |---|---|
 | `docs/` | Project documentation, including the [API contract](docs/api-contract.md) |
 | `test/` | Playwright end-to-end test framework |
+| `tools/` | Developer tooling, including the Git hook setup scripts |
+
+## Pre-commit hook
+
+Gitleaks blocks commits containing secrets in staged changes. Set it up once per clone:
+
+**macOS/Linux (x64 or ARM64):**
+
+```sh
+sh tools/setup-git-hooks.sh
+```
+
+**Windows (x64 or ARM64), from PowerShell:**
+
+```powershell
+./tools/setup-git-hooks.ps1
+```
+
+Setup downloads a pinned official binary, verifies its SHA-256 checksum, and enables
+`.githooks/` for this repository. It requires neither Node.js nor Python. Git must
+be installed; macOS/Linux also need `curl`, `tar`, and `sha256sum` or `shasum`.
+Windows needs Git for Windows and Windows PowerShell 5.1 or later. Internet access
+to GitHub is required during setup, not during commits.
+
+See [Git hooks maintenance](docs/git-hooks.md) for troubleshooting, updates,
+verification, and rollback. Playwright tooling in `test/` still requires Node.js.
 
 ## API contract
 
