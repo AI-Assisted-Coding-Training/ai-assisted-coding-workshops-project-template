@@ -36,7 +36,28 @@ It is also set up to use the **Kainos Backlog Assistant** VS Code extension, whi
 
 ## Pre-commit hook
 
-Run `npm install` in the project folder. It installs knip and turns on the pre-commit hook that runs it.
+Gitleaks blocks commits containing secrets in staged changes. Set it up once per clone:
+
+**macOS/Linux (x64 or ARM64):**
+
+```sh
+sh tools/setup-git-hooks.sh
+```
+
+**Windows (x64 or ARM64), from PowerShell:**
+
+```powershell
+./tools/setup-git-hooks.ps1
+```
+
+Setup downloads a pinned official binary, verifies its SHA-256 checksum, and enables
+`.githooks/` for this repository. It requires neither Node.js nor Python. Git must
+be installed; macOS/Linux also need `curl`, `tar`, and `sha256sum` or `shasum`.
+Windows needs Git for Windows and Windows PowerShell 5.1 or later. Internet access
+to GitHub is required during setup, not during commits.
+
+See [Git hooks maintenance](docs/git-hooks.md) for troubleshooting, updates,
+verification, and rollback. Playwright tooling in `test/` still requires Node.js.
 
 ## API contract
 

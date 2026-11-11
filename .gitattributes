@@ -1,0 +1,3 @@
+/.githooks/* text eol=lf
+/tools/*.sh text eol=lf
+/tools/gitleaks-release.txt text eol=lf

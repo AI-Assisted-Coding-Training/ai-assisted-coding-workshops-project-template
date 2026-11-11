@@ -158,11 +158,10 @@ The [Playwright workflow](../.github/workflows/playwright.yml) defines dependenc
 and browser installation, an `int` environment test run, and HTML report and
 test artifact uploads on pushes and pull requests to `main`.
 
-The copied workflow still assumes a root-level test package. Before using it,
-set `defaults.run.working-directory: test`, set the Node setup action's
-`cache-dependency-path` to `test/package-lock.json`, and use artifact paths
-`test/playwright-report/` and `test/test-results/`. Artifact upload paths are
-relative to the repository root, not the shell working directory.
+The workflow runs shell commands from `test/` and uses `test/package-lock.json`
+for the npm cache. It uploads `test/playwright-report/` and `test/test-results/`;
+artifact upload paths are relative to the repository root, not the shell working
+directory.
 
 ## Future Enhancements
 
