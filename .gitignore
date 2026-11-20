@@ -1,9 +1,6 @@
 # dependencies
 node_modules/
 
-# repository-local tools (installed by tools/setup-git-hooks.*)
-/.tools/
-
 # temporary backlog files
 .backlog/breakdowns/
 .backlog/local/

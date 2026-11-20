@@ -10,6 +10,8 @@ The backend runs as a single Node.js process with all room state held in memory.
 
 ## Connecting
 
+Backend WebSocket URL: `wss://planning-poker-backend-ymq7.onrender.com/ws`
+
 ```
 wss://<host>/ws?room=<roomId>&name=<displayName>[&deck=<deckName>]
 ```
