@@ -4,9 +4,9 @@
   "projectName": "Planning Poker",
   "provider": {
     "type": "github-projects",
-    "organisation": "KainosSoftwareLtd",
+    "organisation": "AI-Assisted-Coding-Training",
     "projectNumber": 101,
-    "repository": "KainosSoftwareLtd/<TO_UPDATE_REPOSITORY_NAME>",
+    "repository": "AI-Assisted-Coding-Training/<TO_UPDATE_REPOSITORY_NAME>",
     "draftLabel": "draft",
     "draftSprintName": "Drafts"
   }
