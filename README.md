@@ -1,6 +1,6 @@
 # Planning Poker
 
-A web application for agile estimation. Team members join a shared room, vote privately on a work item, reveal the votes together and agree on an estimate. 123456qwert
+A web application for agile estimation. Team members join a shared room, vote privately on a work item, reveal the votes together and agree on an estimate.
 
 ## Overview
 
@@ -10,18 +10,12 @@ A web application for agile estimation. Team members join a shared room, vote pr
 
 ## Prerequisites
 
-- Access to the `KainosSoftwareLtd` GitHub organisation and the [GitHub CLI](https://cli.github.com/)
 - Latest [VS Code](https://code.visualstudio.com/)
 - GitHub Copilot licence and the GitHub Copilot Chat extension installed in VS Code
 - Any modern web browser
-- *(Optional)* Node.js and npm, needed only for any Node-based frontend tooling
 
 Preflight check:
 
-```shell
-gh auth status
-gh repo list KainosSoftwareLtd --limit 1
-```
 
 Both commands must succeed, and Copilot Chat must reply to `Hello`.
 
